@@ -9,6 +9,7 @@ body{
     background:linear-gradient(to right, rgb(195, 0, 255),rgb(255, 182, 218));
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-items: center;
+    font-size: larger;
 
 }
 header{

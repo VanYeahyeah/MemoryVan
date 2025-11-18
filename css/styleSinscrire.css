@@ -9,6 +9,7 @@ body{
     background:linear-gradient(to right, rgb(195, 0, 255),rgb(255, 182, 218));
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-items: center;
+    font-size: larger;
 
 }
 header{
@@ -55,7 +56,7 @@ a{
 text-decoration: none;
 color: white;
 }
-.inscrivezvous{
+fieldset{
   
     margin-top: 50px;
     background-color: black;
@@ -63,13 +64,31 @@ color: white;
     padding:20px;
     border-radius: 20px;
     border: solid white 1px;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+    align-items: center;
     justify-content: center;
+    display: flex;
     width: 800px;
+    font-size: larger;
+
     
 }
+legend{
+  
+    
+    font-size:xx-large;
+}
+input{
+    margin-top:30px;
+    font-size: larger;
+    justify-content: right;
+    border-radius: 10px;
+    width: fit-content;
+    height: 30px;
+    width: 400px;
+    border: solid 3px rgb(221, 16, 221);
+    padding-left: 5px;
+}
+
 
 img{
     align-items: center;
@@ -86,4 +105,21 @@ footer{
         left: 0;
         width: 100%;
     
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+    color: rgb(223, 16, 223);
+    text-align: right;
+    margin-right: 5px;
+}
+input.btn {
+    
+    margin: 30px 0px 30px 250px;
+    background-color: rgb(255, 25, 244);
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    color:white;
 }

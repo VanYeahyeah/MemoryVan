@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/connexion.css">
+</head>
+<body>
+    <header>
+        <h1>🦋 ENI - <strong>MEMORY</strong> - Connexion 🦋</h1>
+         <div class="menu">
+             <ul class="menuListe">
+                 <li><a href="index.html">Accueil✨</a>
+                 <li><a href="sinscrire.html">S'inscrire✨</a></li>
+                 <li class="seconnecter">Se connecter✨</a></li>
+                 <li><a href="compte.html">Profil✨</a></li>
+                 <li><a href="jeu.html">Jouer✨</a></li>
+             </ul>
+             </div> 
+     </header>
+     <main>
+        <fieldset>
+            <legend>Connexion</legend>
+            <form action="" method="POST">
+                <div class="inpute">
+                    <label for="name">Nom d'utilisateur</label>
+                    <input type="text" id="name" required="minlength=3">
+                </div>
+                <div class="inpute">   
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" id="password" name="password" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                </div> 
+                <div class="btnForm">
+                    <input type="submit" value="Valider" class="btn">
+                    <input type="reset" value="Annuler saisie" class="btn">
+                    
+                </div>
+            </form>
+        </fieldset>
+       
+
+        </div>
+      </main>
+     <footer>
+
+     </footer>
+</body>
+</html>

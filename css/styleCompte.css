@@ -1,0 +1,135 @@
+h1{
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-weight:lighter;
+    text-shadow:1px 1px 2px black;
+    }
+    body{
+        background:linear-gradient(to right, rgb(195, 0, 255),rgb(255, 182, 218));
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        justify-items: center;
+        font-size: larger;
+    
+    }
+    header{
+        justify-items: center;
+    }
+    
+    .menu{
+        background-color: rgb(39, 39, 39);
+    
+        width: max-content;
+        padding: 10px 5px 10px 5px ;
+        font-size: 20px;
+        justify-content: center;
+        text-decoration: none;
+        border: solid white 1px;
+        display: flex;
+        border-radius: 20px;
+      
+    }
+    .menuListe li{
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        display: inline;
+        margin: 20px;
+        justify-content: space-evenly;
+        color:white;
+    }
+    /* .menueListe li:hover{
+      
+        background-color: rgb(226, 29, 177);
+        border-radius: 10px;
+        padding: 2px;
+       
+    } */
+    .profil{
+        color: rgb(226, 29, 177);
+        background-color: rgb(226, 29, 177);
+        border-radius: 10px;
+        padding:5px;
+    
+    }
+    a{
+    text-decoration: none;
+    color: white;
+    }
+    fieldset{
+      
+        margin-top: 50px;
+        background-color: black;
+        color: white;
+        padding:20px;
+        border-radius: 20px;
+        border: solid white 1px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 800px;
+        font-size: larger;
+    
+        
+    }
+    legend{
+      
+        
+        font-size:xx-large;
+    }
+    input{
+        margin-top:30px;
+        font-size: larger;
+        justify-content: right;
+        border-radius: 10px;
+        width: fit-content;
+        height: 30px;
+        width: 400px;
+        border: solid 3px rgb(221, 16, 221);
+        padding-left: 5px;
+        
+    }
+    select{
+        width: max-content;
+        font-size: larger;
+        border-radius: 10px;
+        border: solid 3px rgb(221, 16, 221);
+        margin-top:30px;
+        padding-left: 2px;;
+    }
+    
+    
+    img{
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+       width:50%;
+       padding: 10px 200px 10px 200px;
+    
+    }
+    
+    footer{
+      
+            position:absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        
+    }
+    
+    label {
+        display: inline-block;
+        width: 200px;
+        color: rgb(223, 16, 223);
+        text-align: right;
+        margin-right: 5px;
+    }
+    input.btn {
+        
+        margin: 30px 0px 30px 250px;
+        background-color: rgb(255, 25, 244);
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        color:white;
+    }

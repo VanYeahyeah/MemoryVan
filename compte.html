@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styleCompte.css">
+</head>
+<body>
+    <header>
+        <h1>🦋 ENI - <strong>MEMORY</strong> - Profil 🦋</h1>
+         <div class="menu">
+             <ul class="menuListe">
+                 <li><a href="index.html">Accueil✨</a>
+                 <li><a href="sinscrire.html">S'inscrire✨</a></li>
+                 <li><a href="connexion.html">Se connecter✨</a></li>
+                 <li class="profil">Profil✨</li>
+                 <li><a href="jeu.html">Jouer✨</a></li>
+             </ul>
+             </div> 
+     </header>
+     <main>
+       <section class="sectionForm">
+        <fieldset>
+            <legend>Profil</legend>
+            <form action="" method="POST">
+                <div class="inpute">
+                    <label for="name">Nom d'utilisateur</label>
+                    <input type="text" name="me_auteur" value="van" readonly>
+                </div>
+                <div class="inpute">
+                    <label for="email">Email:</label>
+                    <input type="text" name="me_email" size="40" value="van.martignoni@hotmail.fr" onclick="alerte5()" readonly>
+                </div> 
+                <label for="choixMemory">Choix de la planche</label>
+                <select name="choix" id="choix">
+                    <option value="britney">Memory Britney</option>
+                    <option value="chatons">Memory chatons</option>
+                    <option value="chiots">Memory chiots</option>
+                    <option value="accessoires">Memory accessoires</option>
+                    <option value="lorie">Memory Lorie</option>
+                </select>
+                <img src="Projet/Multimedia/memoryBrtibrit.png" alt="Memory Britney">
+                <label for="tailleMemory">Taille de la planche</label>
+                <select name="taille" id="taille">
+                    <option value="2*2">2*2</option>  
+                    <option value="3*3">3*3</option>
+                    <option value="4*3" selected>4*3</option>
+                    <option value="5*3">5*3</option>
+                    <option value="5*5">5*5</option>
+                   
+                </select>
+                <div class="inpute">   
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" id="password" name="password" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                </div> 
+                <div class="inpute">
+                    <label for="mdpVerif">Vérifiez votre mot de passe:</label>
+                    <input type="password" name="mdpVerif" id="mdpVerif" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                </div>
+                <div class="btn">
+                    <input type="submit" value="Valider" class="btn">
+                </div>
+            </form>
+           </fieldset>
+          </section>  
+     </main>
+     <footer>
+
+     </footer>
+</body>
+</html>
