@@ -40,7 +40,7 @@
                     <option value="accessoires">Memory accessoires</option>
                     <option value="lorie">Memory Lorie</option>
                 </select>
-                <img src="Projet/Multimedia/memoryBrtibrit.png" alt="Memory Britney">
+                <img src="Projet/Multimedia/britney/memoryBrtibrit.png" alt="Memory Britney">
                 <label for="tailleMemory">Taille de la planche</label>
                 <select name="taille" id="taille">
                     <option value="2*2">2*2</option>  
@@ -50,16 +50,26 @@
                     <option value="5*5">5*5</option>
                    
                 </select>
-                <div class="inpute">   
-                    <label for="password">Mot de passe:</label>
-                    <input type="password" id="password" name="password" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                </div> 
-                <div class="inpute">
-                    <label for="mdpVerif">Vérifiez votre mot de passe:</label>
-                    <input type="password" name="mdpVerif" id="mdpVerif" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                </div>
+               
+                <table>
+                    <caption>Derniers meilleurs scores:</caption>
+                    <tr>
+                    <td>Pseudo</td>
+                    <td>Score</td>    
+                    <td>Taille</td>
+                    <td>Choix Memory</td>
+                    <td>Date</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>    
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </table>
                 <div class="btn">
-                    <input type="submit" value="Valider" class="btn">
+                    <input type="submit" value="Enregistrer l'option" class="btn">
                 </div>
             </form>
            </fieldset>
@@ -68,5 +78,6 @@
      <footer>
 
      </footer>
+     <script src="js/compte.js"></script>
 </body>
 </html>

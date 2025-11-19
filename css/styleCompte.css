@@ -133,3 +133,25 @@ h1{
         display: flex;
         color:white;
     }
+    table {
+        border-collapse: collapse;
+        border: 2px solid rgb(243, 24, 177);
+        font-family: sans-serif;
+        font-size: 0.8rem;  
+        width: max-content;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        background-color: white;
+        border-radius: 10px;
+        font-size: large;
+        color: black;
+        padding: 10px 200px 10px 200px;
+        margin: 10px 200px 10px 180px;
+      }
+      
+th,td {
+  border: 1px solid rgb(243, 24, 177);
+  padding: 8px 10px;
+  height: 30px;
+
+}
