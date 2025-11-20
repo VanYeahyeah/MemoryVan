@@ -1,7 +1,11 @@
 var choixMemory = 0;
+var theme=[britney, chatons, chiots, lorie];
 var choixTaille = 0;
-var motifsCartes = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10];//10 paires au total donc on double chaque carte. chaque chiffre correspond à un motif
-var etatsCartes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//0 correspond à l'état retourné
+var taille=[3*3];
+// var motifsCartes = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10];//10 paires au total donc on double chaque carte. chaque chiffre correspond à un motif
+var motifsCartes=[1,1,2,2];
+// var etatsCartes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//0 correspond à l'état retourné
+var etatsCartes =[0,0,0,0];
 var cartesRetournees = [];//nombre de carte retournée (max2)
 var nbPairesTrouvees = 0;//compteur de cartes déjà trouvées
 var imgCartes = document.getElementById("tapis").getElementsByTagName("img");
@@ -9,18 +13,20 @@ var nbCoup = 0;
 var clickDisplay = document.getElementById('nbCoup');
 var cardDisplay = document.getElementById('nbPairesTrouvees');
 
+// var discoursDisplay = document.getElementById('cestGagne');
 
 function choix() {
+    
     switch (choixMemory) {
-        case 0: imgCartes[noCarte].src = "Projet/Multimedia/carteRetournée.png";//0 correspond à Britney
+        case 0: imgCartes[noCarte].src = "Projet/Multimedia/britney";//0 correspond à Britney
             break;
-        case 1: //1 Correspond à chatons
+        case 1: imgCartes[noCarte].src = "Projet/Multimedia/chatons"; //1 Correspond à chatons
             break;
         case 2: //2 correspond à chiots
             break;
-        case 3: //3 correspond à accessoires
+        case 3: //3 correspond à  lorie
             break;
-        case 4: //4 correspond à lorie
+      
 
     }
 }
@@ -39,6 +45,7 @@ function majAffichage(noCarte) {
             imgCartes[noCarte].src = "Projet/Multimedia/britney/carteRetournée.png";//affiche une image unique quand la carte est retournée
             break;
         case 1:
+            
             imgCartes[noCarte].src = "Projet/Multimedia/britney/carte" + motifsCartes[noCarte] + ".jpg";//le chemin de l'image de la carte à retourner côté visible
             break;
         case -1:
@@ -48,7 +55,7 @@ function majAffichage(noCarte) {
     }
 }
 function rejouer() {
-    alert("Bravo!");
+
     location.reload();
 }
 function initialiseJeu() {
@@ -65,6 +72,7 @@ function controleJeu(noCarte) {
             etatsCartes[noCarte] = 1;
             cartesRetournees.push(noCarte);
             majAffichage(noCarte);
+            
         }
         if (cartesRetournees.length == 2) {//si deux cartes sont retournées
             nbCoup++;
@@ -79,7 +87,8 @@ function controleJeu(noCarte) {
                 majAffichage(cartesRetournees[0]);
                 majAffichage(cartesRetournees[1]);
                 cartesRetournees = [];
-                if (nbPairesTrouvees == 10) {
+                // if (nbPairesTrouvees == 10) {
+                if(nbPairesTrouvees==2){
                     rejouer();
                 }
             }, 500);
@@ -87,6 +96,14 @@ function controleJeu(noCarte) {
            
         }console.log(nbPairesTrouvees);
         cardDisplay.innerHTML =nbPairesTrouvees;
+    }
+}   
+var cestGagne=document.getElementById('cestGagne');
+function affichage(cestGagne){
+    if(nbPairesTrouvees==2){
+     
+        cestGagne.innerText = "C'est gagné!!!!";
+      
     }
 }
 // var nbcoup = nbPairesTrouvees;

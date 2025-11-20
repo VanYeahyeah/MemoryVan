@@ -56,7 +56,6 @@ h1{
     }
     table {
         border-collapse: collapse;
-        border: 2px solid rgb(243, 24, 177);
         font-family: sans-serif;
         font-size: 0.8rem;
         letter-spacing: 1px;
@@ -65,12 +64,7 @@ h1{
         border-radius: 10px;
         font-size: large;        
       }
-      
-th,td {
-  border: 1px solid rgb(243, 24, 177);
-  padding: 8px 10px;
-  height: 30px;
-}
+
 
 caption{
     font-size: larger;
@@ -78,13 +72,51 @@ caption{
     color: white;
 }
 
-.card {
-    zoom: 1;
-    vertical-align: top;
-    margin: .4%;
-    overflow: hidden;
-}
+.img-inner {
+    position:relative;
+    width: 100%;
+    height:100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
 
 img{
     cursor:pointer;
+    border-radius: 10px;   
+    cursor: pointer;
+  position: relative;
+}
+img.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+.score{
+    background-color: black;
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 20px;
+    margin: 20px 100px 20px 200px;
+    padding: 10px 10px 10px 10px;
+    font-size: larger;
+    width: max-content;
+}
+span{
+    color: rgb(226, 43, 165);
+}
+.meilleursScores, .meilleursScores td{
+    margin: 0px 100px 30px 165px;
+    border: solid 3px rgb(226, 43, 195);
+    border-radius: 10px;
+    border-collapse:separate;
+    padding: 10px;
+    height: 30px;
+    
+
+}
+#tapis{
+  border-spacing: 20px 20px;
+  border-collapse: separate;
+  background-color: transparent;
+  border: transparent;
 }

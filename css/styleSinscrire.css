@@ -69,6 +69,7 @@ fieldset{
     display: flex;
     width: 800px;
     font-size: larger;
+    flex-direction: column;
 
     
 }
@@ -122,4 +123,9 @@ input.btn {
     width: fit-content;
     display: flex;
     color:white;
+}
+.infos{
+    align-items: center;
+    justify-content: center;
+    justify-items:center;
 }

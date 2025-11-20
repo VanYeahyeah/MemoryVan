@@ -23,32 +23,43 @@
        <section class="sectionForm">
         <fieldset>
             <legend>Formulaire</legend>
-            <form action="" method="POST">
+            <form action="" id="inscriptionForm" method="POST">
                 <div class="inpute">
                     <label for="name">Nom d'utilisateur</label>
-                    <input type="text" id="name" required="minlength=3">
+                    <input type="text" id="nom" required="minlength=3">
                 </div>
                 <div class="inpute">
                     <label for="email">Entrez votre email:</label>
-                    <input type="email" id="email" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}">
+                    <input type="email" id="email">
                 </div> 
                 <div class="inpute">   
-                    <label for="password">Mot de passe:</label>
-                    <input type="password" id="password" name="password" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    <label for="mdp">Mot de passe:</label>
+                    <input type="password" id="mdp" name="mdp" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                 </div> 
                 <div class="inpute">
                     <label for="mdpVerif">Vérifiez votre mot de passe:</label>
-                    <input type="password" name="mdpVerif" id="mdpVerif" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    <input type="password" name="mdpVerif" id="mdpVerif" required title="Cela ne correspond pas au mot de passe" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                 </div>
-                <div class="btn">
-                    <input type="submit" value="Valider" class="btn">
+                    <input type="submit" value="valider" id="valider" class="btn" disabled>
                 </div>
             </form>
+            <section class="infos">
+                <h2>Le mot de passe:</h2>
+                <ul>
+                    <li id="minuscule">Doit comporter une minuscule</li>
+                    <li id="majuscule">Doit comporter une majuscule</li>
+                    <li id="chiffre">Doit comporter un chiffre</li>
+                    <li id="nbCaracteres">Doit contenir au minimum 8 caractères</li>
+                    <li id="identique">La vérification doit être identique au mot de passe</li>
+                </ul>
+            </section>
            </fieldset>
           </section>  
      </main>
      <footer>
 
      </footer>
+     <script src="js/auth.js"></script>
+     <script src="js/sinscire.js"></script>
 </body>
 </html>
