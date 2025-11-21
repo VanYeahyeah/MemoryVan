@@ -30,6 +30,10 @@ function controleMotDePasse(){
     verifChiffre(mdp);
     verifNbCaracteres(mdp);
     validation(mdp,mdpVerif);
+    const strength = calculatePasswordStrength(mdp);
+    console.log("strength:"+strength);
+    updateStrengthMeter(strength);
+    validation();
 }
 function verifMinuscule(mdp){
     console.log("Vérification minuscule pour:",mdp);
@@ -115,3 +119,37 @@ function verifMdpIdentique(mdp, mdpVerif){
         colorTextRed("identique");
     }
 };
+//barre difficulté mdp
+function calculatePasswordStrength(mdp){
+    let strength = 0;
+    if(mdp.length >=8) strength +=1;
+    if(mdp.length >=12)strength +=1;
+    if(/[a-z]/.test(mdp))strength +=1;
+    if(/[A-Z]/.test(mdp)) strength +=1;
+    if(/[0-9]/.test(mdp)) strength +=1;
+    if(/[^a-zA-Z0-9]/.test(mdp)) strength += 1;
+    return strength;
+}
+
+//met à jour la barre de force
+function updateStrengthMeter(strength){
+    const meter = document.getElementById('strength-meter');
+    const text = document.getElementById('strength-text');
+    let width, color, message;
+    if(strength <=2){
+        width =(strength / 6)*100;
+        color = 'red';
+        message ='trop facile à pirater';
+    }else if(strength <=4){
+        width = (strength /6)*100;
+        color='orange';
+        message = 'Mouais';
+    }else{
+        width =100;
+        color='green';
+        message ='mega fort'
+    }
+    meter.style.width = width +'%';
+    meter.style.backgroundColor = color;
+    text.textContent = message;
+}

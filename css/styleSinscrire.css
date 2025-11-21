@@ -129,3 +129,19 @@ input.btn {
     justify-content: center;
     justify-items:center;
 }
+#password-strength{
+    margin-top: 10px;
+    width: 100%;
+}
+#strength-meter {
+    margin-top: 10px;
+    height: 5px;
+    width: 0%;
+    background-color: transparent;
+    transition: width 0.3s, background-color 0.3s;
+}
+#strength-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 20px;
+}
